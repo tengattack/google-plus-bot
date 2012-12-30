@@ -11,3 +11,7 @@
 *.lai
 *.la
 *.a
+cookie.txt
+qa.db
+/Release/teng
+/Release/teng.bat

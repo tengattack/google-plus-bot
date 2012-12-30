@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="library">
+      <UniqueIdentifier>{73a42b4f-3e4d-4cea-a60b-71845c88e5ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="v8engine">
+      <UniqueIdentifier>{5ba9ed5c-da53-4ba3-a5c7-91241f6639cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gplus">
+      <UniqueIdentifier>{30f29b7c-faa2-47d5-b1fc-d801566a9aa0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SDKs\tengattack\net\net.cc">
+      <Filter>library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SDKs\tengattack\common\common_util.cc">
+      <Filter>library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdks\tengattack\engine\script_engine.cc">
+      <Filter>v8engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdks\tengattack\engine\script\ScriptBase.cc">
+      <Filter>v8engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdks\tengattack\engine\script\ScriptFile.cc">
+      <Filter>v8engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdks\tengattack\engine\script\ScriptFileDialog.cc">
+      <Filter>v8engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdks\tengattack\engine\script\ScriptTAV8Http.cc">
+      <Filter>v8engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdks\tengattack\engine\script\ScriptThreadPool.cc">
+      <Filter>v8engine</Filter>
+    </ClCompile>
+    <ClCompile Include="gplustypes\post.cc">
+      <Filter>gplus</Filter>
+    </ClCompile>
+    <ClCompile Include="gplustypes\notification.cc">
+      <Filter>gplus</Filter>
+    </ClCompile>
+    <ClCompile Include="gplustypes\notifications.cc">
+      <Filter>gplus</Filter>
+    </ClCompile>
+    <ClCompile Include="gplustypes\comment.cc">
+      <Filter>gplus</Filter>
+    </ClCompile>
+    <ClCompile Include="GooglePlus.cc">
+      <Filter>gplus</Filter>
+    </ClCompile>
+    <ClCompile Include="rule.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cache.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gplus_script.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdks\tengattack\engine\script\ScriptSqlite.cc">
+      <Filter>v8engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdks\filecommon\file_path.cc">
+      <Filter>library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdks\tengattack\cuteui\base\base_util.cc">
+      <Filter>library</Filter>
+    </ClCompile>
+    <ClCompile Include="gplustypes\media.cc">
+      <Filter>gplus</Filter>
+    </ClCompile>
+    <ClCompile Include="config.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\sdks\tengattack\engine\script\ClsFile.h">
+      <Filter>v8engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sdks\tengattack\engine\script\ClsFileDialog.h">
+      <Filter>v8engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sdks\tengattack\engine\script\ClsTAHttp.h">
+      <Filter>v8engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sdks\tengattack\engine\script_engine.h">
+      <Filter>v8engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sdks\tengattack\engine\script_func.h">
+      <Filter>v8engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sdks\tengattack\engine\script_thread.h">
+      <Filter>v8engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sdks\tengattack\engine\script\ScriptBase.h">
+      <Filter>v8engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sdks\tengattack\engine\script\ScriptFile.h">
+      <Filter>v8engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sdks\tengattack\engine\script\ScriptFileDialog.h">
+      <Filter>v8engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sdks\tengattack\engine\script\ScriptTAV8Http.h">
+      <Filter>v8engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sdks\tengattack\engine\script\ScriptThreadPool.h">
+      <Filter>v8engine</Filter>
+    </ClInclude>
+    <ClInclude Include="gplustypes\notifications.h">
+      <Filter>gplus</Filter>
+    </ClInclude>
+    <ClInclude Include="gplustypes\comment.h">
+      <Filter>gplus</Filter>
+    </ClInclude>
+    <ClInclude Include="GooglePlus.h">
+      <Filter>gplus</Filter>
+    </ClInclude>
+    <ClInclude Include="gplustypes\notification.h">
+      <Filter>gplus</Filter>
+    </ClInclude>
+    <ClInclude Include="cache.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rule.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gplus_script.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sdks\tengattack\engine\script\ScriptSqlite.h">
+      <Filter>v8engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sdks\tengattack\engine\script\ClsSqlite.h">
+      <Filter>v8engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sdks\filecommon\file_path.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="gplustypes\media.h">
+      <Filter>gplus</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
