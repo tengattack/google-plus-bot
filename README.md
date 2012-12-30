@@ -1,8 +1,8 @@
 ﻿google-plus-bot by tengattack (Windows)
-tengattack#gmail.com (# -> @)
 ===============
 
 a bot in google plus.
+email: tengattack#gmail.com (# -> @)
 
 Static-vc100 build version can be ran in WinXP.
 
