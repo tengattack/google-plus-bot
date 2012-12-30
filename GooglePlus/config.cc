@@ -1,6 +1,7 @@
 
-#include "config.h"
+#include <winsock2.h>
 
+#include "config.h"
 #include "rule.h"
 
 #include <filecommon/file_path.h>
@@ -15,6 +16,13 @@
 #include <base/json/json_writer.h>
 #include <base/json/json_reader.h>
 
+#include <net/http/TANetBase.h>
+
+#define UPDATE_URL		"https://github.com/tengattack/google-plus-bot"
+#define VERSION_URL		"https://raw.github.com/tengattack/google-plus-bot/master/VERSION.txt"
+#define VERSION_TEXT	"0.1000.2324"
+
+/*
 std::string& replace_all(std::string& str, const std::string& old_value, const std::string& new_value)
 {   
 	while (true)
@@ -27,6 +35,7 @@ std::string& replace_all(std::string& str, const std::string& old_value, const s
 	}
 	return str;
 }
+*/
 
 namespace config {
 
@@ -252,7 +261,26 @@ bool LoadConfig(LPCTSTR confpath)
 
 void CheckUpdate()
 {
-	
+	wprintf(L"\ngoogle-plus-bot by ÌÚÏ® (tengattack)\n");
+	printf("\nversion: %s\n\n", VERSION_TEXT);
+
+	printf("Checking update...");
+
+	CTANetBase net_base;
+	CBuffer response;
+	if (net_base.CurlRequestGet(VERSION_URL, response) == TA_NET_OK) {
+		response.WriteZeroByte();
+		if (strcmp(VERSION_TEXT, (const char *)response.GetBuffer()) == 0) {
+			printf("already the latest.");
+		} else {
+			printf("find update (%s).", response.GetBuffer());
+			printf("please goto %s to download the latest.", UPDATE_URL);
+		}
+	} else {
+		printf("failed.");
+	}
+
+	printf("\n\n");
 }
 
 }
