@@ -1,6 +1,9 @@
 ﻿google-plus-bot by tengattack (Windows)
 ===============
 
+License:
+GPLv3
+
 a bot in google plus.
 
 email: tengattack#gmail.com (# -> @)
