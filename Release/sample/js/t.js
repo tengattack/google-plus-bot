@@ -1,0 +1,2 @@
+﻿
+print("sample script");

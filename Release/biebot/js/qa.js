@@ -97,7 +97,7 @@ if (baseinfo.user != "") {
 				        if (del) {
 				        	if (answer || delid) reply_text += "\n";
 
-							if (sqlite.Query("DELETE FROM qa_db WHERE question LIKE '%" + question + "%' AND answer = '%" + del + "%';")) {
+							if (sqlite.Query("DELETE FROM qa_db WHERE question LIKE '%" + question + "%' AND answer LIKE '%" + del + "%';")) {
 				                print("sqlite.Query DELETE succeed! " + question + " : " + del);
 				                getreply = true;
 
