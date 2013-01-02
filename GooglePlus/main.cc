@@ -130,12 +130,12 @@ int wmain(int argc, wchar_t *argv[])
 		return 1;
 	}
 
+	config::CheckUpdate();
+
 	if (!config::LoadConfig((argc > 1) ? argv[1] : NULL)) {
 		printf("LoadConfig failed!\n");
 		return 1;
 	}
-
-	config::CheckUpdate();
 
 	if (config::imode >= kRMTCount || config::imode < 0) {
 		printf("Error Mode: %d!\n", config::imode);
@@ -246,6 +246,8 @@ int wmain(int argc, wchar_t *argv[])
 							notice->GetPost());
 					}
 				}
+			} else {
+				printf("GetNotificationsData failed!\n");
 			}
 			break;
 		case kRMTStream:
@@ -284,6 +286,8 @@ int wmain(int argc, wchar_t *argv[])
 						delete newposts[i];
 					}
 				}
+			} else {
+				printf("GetActivities failed!\n");
 			}
 			break;
 		case kRMTCommunityStream:
@@ -304,6 +308,8 @@ int wmain(int argc, wchar_t *argv[])
 						posts[i]);
 					delete posts[i];
 				}
+			} else {
+				printf("GetCommunities failed!\n");
 			}
 			break;
 		}
