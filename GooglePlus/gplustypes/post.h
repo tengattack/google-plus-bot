@@ -50,11 +50,15 @@ public:
 
 	Post *original;
 
-	inline Comment* GetComment(int i) {
-		if (i >= 0 && i < m_comment_count && i < m_comments.size()) {
+	inline Comment* GetExistComment(int i) {
+		if (i >= 0 && i < m_comments.size()) {
 			return m_comments[i];
 		}
 		return NULL;
+	}
+
+	inline uint32 GetExistCommentCount() {
+		return m_comments.size();
 	}
 
 	Media m_media;

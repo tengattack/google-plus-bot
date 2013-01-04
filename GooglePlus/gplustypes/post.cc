@@ -183,8 +183,9 @@ bool Post::parse(ListValue *lv) {
 		}
 
 		m_comment_count = 0;
-		lv->GetInteger(93, &m_plusone_count);
+		lv->GetInteger(93, &m_comment_count);
 
+		//只有部分的评论
 		if (lv->GetList(7, &sublv)) {
 			ListValue::iterator iter = sublv->begin();
 			while (iter != sublv->end()) {

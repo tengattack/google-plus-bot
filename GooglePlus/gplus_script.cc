@@ -114,6 +114,11 @@ void SetPostBaseInfoToObject(gplus::Post *post, v8::Handle<v8::Object> obj_post)
 	obj_post->Set(String::New("author"), String::New(post->author.c_str()));
 	obj_post->Set(String::New("author_id"), String::New(post->author_id.c_str()));
 	obj_post->Set(String::New("content"), String::New(post->content.c_str()));
+	if (post->m_edited) {
+		obj_post->Set(String::New("time"), Number::New(post->m_edited_time));
+	} else {
+		obj_post->Set(String::New("time"), Number::New(post->m_time));
+	}
 
 	obj_post->Set(String::New("in_community"), Boolean::New(post->m_in_community));
 
@@ -168,8 +173,8 @@ void AddGlobalObject(UserParam *up, v8::Handle<v8::Object> obj)
 		SetPostBaseInfoToObject(up->post, obj_post);
 
 		v8::Handle<v8::Array> obj_comments = Array::New();
-		for (int i = 0; i < up->post->m_comment_count; i++) {
-			gplus::Comment *comment = up->post->GetComment(i);
+		for (int i = 0; i < up->post->GetExistCommentCount(); i++) {
+			gplus::Comment *comment = up->post->GetExistComment(i);
 
 			v8::Handle<v8::Object> obj_comment = Object::New();
 			if (comment) {
@@ -177,6 +182,11 @@ void AddGlobalObject(UserParam *up, v8::Handle<v8::Object> obj)
 				obj_comment->Set(String::New("author"), String::New(comment->author.c_str()));
 				obj_comment->Set(String::New("author_id"), String::New(comment->author_id.c_str()));
 				obj_comment->Set(String::New("content"), String::New(comment->content.c_str()));
+				if (comment->m_edited) {
+					obj_comment->Set(String::New("time"), Number::New(comment->m_edited_time));
+				} else {
+					obj_comment->Set(String::New("time"), Number::New(comment->m_time));
+				}
 			}
 			obj_comments->Set(i, obj_comment);
 		}
